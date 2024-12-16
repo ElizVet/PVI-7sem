@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Admin/SignOut</title>
+</head>
+<body>
+	<h1>Admin/SignOut</h1>
+	<form method="post" action="/Admin/SignOut">
+		<input type="hidden" name="controller" value="Home" />
+		<input type="hidden" name="action" value="Index" />
+		<input type="submit" value="SignOut" />
+	</form>
+</body>
+</html>

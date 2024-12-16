@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+	Layout = null;
+}
+@functions
+{
+	string getUserName(string userID)
+	{
+		string? name = ((List<IdentityUser>)ViewBag.users).FirstOrDefault(u =>
+		{
+			return (u.Id == userID);
+		})?.UserName;
+		return string.Format("{0}", name);
+	}
+	string getRoleName(string roleID)
+	{
+		string? name = ((List<IdentityRole>)ViewBag.roles).FirstOrDefault(r =>
+		{
+			return (r.Id == roleID);
+		})?.Name;
+		return string.Format("{0}", name);
+	}
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Admin/Index</title>
+</head>
+<body>
+	<h1>Admin/Index</h1>
+	<a href="/Admin/CreateUser">CreateUser</a>
+	<a href="/Admin/DeleteUser">DeleteUser</a>
+	<a href="/Admin/Assign">Assign</a>
+	<a href="/Admin/CreateRole">CreateRole</a>
+	<a href="/Admin/DeleteRole">DeleteRole</a>
+	<div>
+		<h2>@ViewBag.user.UserName: @ViewBag.userRoles</h2>
+		<h2>Users</h2>
+			@foreach (IdentityUser user in ViewBag.users)
+			{
+				<p>@user.Id, @user.UserName</p>
+			}
+
+		<h2>Roles</h2>
+			@foreach (IdentityRole role in ViewBag.roles)
+			{
+				<p>@role.Id, @role.Name</p>
+			}
+
+		<h2>Users/Roles</h2>
+			@foreach (IdentityUserRole<string> ur in ViewBag.users_roles)
+			{
+				<p>@getUserName(ur.UserId): @getRoleName(ur.RoleId)</p>
+			}
+	</div>
+</body>
+</html>

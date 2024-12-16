@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
+@{
+	Layout = null;
+	var user = ViewBag.user as IdentityUser;
+	var userRoles = ViewBag.userRoles as string;
+	bool isAuthenticated = user != null;
+}
+
+<!DOCKTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Home/Index</title>
+</head>
+<body>
+	<h1>Home/Index</h1>
+	@if (isAuthenticated)
+	{
+		<form method="get" action="/Admin/SignOut">
+			<input type="hidden" name="controller" value="Admin" />
+			<input type="hidden" name="action" value="SignOut" />
+			<input type="submit" value="SignOut" />
+		</form>
+	}
+	else
+	{
+		<a href="/Admin/Register">Register</a>
+		<a href="/Admin/SignIn">Sign In</a>
+	}
+	<div>
+		@if (isAuthenticated)
+		{
+			<h2>Hello, @user.UserName : @userRoles</h2>
+			<a href="/Admin/ChangePassword">Change password</a>
+			<br>
+		}
+
+		@if (userRoles !=  null && userRoles.Contains("Administrator"))
+		{
+			<a href="/Admin/Index">Admin/Index</a>
+			<br>
+		}
+
+		@if (userRoles != null && (userRoles.Contains("Employee") || userRoles.Contains("Master")))
+		{
+			<a href="/Calc/Index">Calc/Index</a>
+		}
+
+		<br><br>
+
+		@if (isAuthenticated && userRoles != null && !userRoles.Contains("Administrator"))
+		{
+			<form method="post" action="/Admin/DeleteSelf">
+				<input type="hidden" name="controller" value="Home" />
+				<input type="hidden" name="action" value="Index" />
+				<input type="submit" value="Delete account" />
+			</form>
+		}
+	</div>
+</body>
+</html>

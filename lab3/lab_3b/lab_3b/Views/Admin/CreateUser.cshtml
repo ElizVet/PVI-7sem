@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Admin/CreateUser</title>
+</head>
+<body>
+	<h1>Admin/CreateUser</h1>
+	<form method="post" action="/Admin/CreateUser">
+		Name: <input type="text" name="name" />
+		Password: <input type="text" name="pass" />
+		<input type="hidden" name="controller" value="Admin" />
+		<input type="hidden" name="action" value="Index" />
+		<input type="submit" value="OK" />
+		<input type="reset" value="Reset" />
+	</form>
+</body>
+</html>

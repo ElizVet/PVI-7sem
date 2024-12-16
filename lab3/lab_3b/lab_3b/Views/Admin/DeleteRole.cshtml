@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Admin/DeleteRole</title>
+</head>
+<body>
+	<h1>Admin/DeleteRole</h1>
+	<form method="post" action="/Admin/DeleteRole">
+		Name: <input type="text" name="name" />
+		<input type="hidden" name="controller" value="Admin" />
+		<input type="hidden" name="action" value="Index" />
+		<input type="submit" value="OK" />
+		<input type="reset" value="Reset" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\bin\Release\WindowsFormsApp1a.exe.config
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\bin\Release\WindowsFormsApp1a.exe
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\bin\Release\WindowsFormsApp1a.pdb
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.csproj.AssemblyReference.cache
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.csproj.SuggestedBindingRedirects.cache
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.Form1.resources
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.Properties.Resources.resources
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.csproj.GenerateResource.cache
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.csproj.CoreCompileInputs.cache
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.exe
+D:\sem7\PvI\lab1a\WebApplication1a\WindowsFormsApp1a\obj\Release\WindowsFormsApp1a.pdb
